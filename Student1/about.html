@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EZ-AI | About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #fffaf3, #ffe9e9);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      color: #333;
+    }
+    header, footer {
+      background: linear-gradient(to right, #f8bfa0, #f6a7c1);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    header img {
+      height: 48px;
+    }
+    nav a {
+      color: white;
+      margin: 0 0.75rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+    .about-section {
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+    }
+    .about-section h2 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #f2994a, #eb5757);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 1s ease-out;
+    }
+    .about-section p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #444;
+      animation: fadeInUp 1.4s ease-out;
+    }
+    .about-section strong {
+      color: #eb5757;
+    }
+    footer {
+      background: #2a1f1d;
+      color: white;
+      text-align: center;
+      flex-direction: column;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 480px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .modal-content input, .modal-content textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .modal-content button {
+      background: #f2994a;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(40px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 3rem 1rem;
+      }
+      .about-section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://ezaillc.github.io/TrainingBatch1/Student1/images/logo.png" alt="EZ-AI Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="#" onclick="openForm()">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h2>About EZ-AI</h2>
+    <p>
+      At <strong>EZ-AI</strong>, we believe that AI should feel empowering, not overwhelming. Our mission is simple: to help professionals, entrepreneurs, and curious minds confidently harness the power of generative AI to fuel their growth, creativity, and innovation.<br><br>
+      We started this journey because we saw a growing gap — brilliant people with amazing ideas, unsure how to tap into the fast-moving world of AI. That’s where we come in. With a background in technology, education, and digital strategy, our team is passionate about making AI approachable, practical, and truly useful for everyday work and life.<br><br>
+      What makes us different? We meet you where you are. We don’t just throw jargon or tools at you. We offer real coaching, clear guidance, and hands-on support. From personalized prompt engineering to step-by-step tutorials, everything we do is designed to meet you where you are — whether you're just exploring or ready to integrate AI into your business or career.<br><br>
+      You're not alone on this path. We're here to walk it with you — with curiosity, clarity, and a whole lot of creativity.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EZ-AI. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61578571660142" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+
+  <div class="modal" id="contactForm">
+    <div class="modal-content">
+      <h2>Contact Us</h2>
+      <form action="https://formsubmit.co/kalyani@ezaillc.onmicrosoft.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById('contactForm').style.display = 'flex';
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactForm');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    };
+  </script>
+</body>
+</html>
 
